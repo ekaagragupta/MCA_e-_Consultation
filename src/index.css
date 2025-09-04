@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MCA e-Consultation Dashboard Design System */
+
+@layer base {
+  :root {
+    /* Core Background & Text */
+    --background: 240 10% 98%;
+    --foreground: 224 71% 4%;
+
+    /* Card System */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    /* Primary Brand - Professional Government Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 9% 46%;
+
+    /* Muted */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Accent */
+    --accent: 217 91% 95%;
+    --accent-foreground: 217 91% 60%;
+
+    /* Intent-Based Colors */
+    --intent-complaint: 0 84% 60%;     /* Red for complaints */
+    --intent-suggestion: 217 91% 60%;  /* Blue for suggestions */
+    --intent-approval: 142 76% 36%;    /* Green for approvals */
+    --intent-query: 45 93% 47%;        /* Yellow for queries */
+
+    /* Sentiment Colors */
+    --sentiment-positive: 142 76% 36%;
+    --sentiment-neutral: 220 9% 46%;
+    --sentiment-negative: 0 84% 60%;
+
+    /* System Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* Design System Properties */
+    --radius: 8px;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-dashboard: linear-gradient(180deg, hsl(240 10% 98%), hsl(220 14% 96%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 14% 98%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px -4px hsl(217 91% 60% / 0.1);
+    --shadow-chart: 0 8px 32px -8px hsl(217 91% 60% / 0.15);
+    --shadow-elegant: 0 2px 10px -2px hsl(220 13% 91% / 0.5);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 8px;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 71% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 71% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 70%;
+    --primary-foreground: 224 71% 4%;
+    --primary-glow: 217 91% 80%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 18%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Intent Colors (unchanged for consistency) */
+    --intent-complaint: 0 84% 60%;
+    --intent-suggestion: 217 91% 70%;
+    --intent-approval: 142 76% 45%;
+    --intent-query: 45 93% 55%;
+
+    /* Sentiment Colors (unchanged for consistency) */
+    --sentiment-positive: 142 76% 45%;
+    --sentiment-neutral: 220 9% 60%;
+    --sentiment-negative: 0 84% 60%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 217 32% 20%;
+    --input: 217 32% 18%;
+    --ring: 217 91% 70%;
+
+    /* Gradients for dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 70%), hsl(217 91% 80%));
+    --gradient-dashboard: linear-gradient(180deg, hsl(224 71% 4%), hsl(217 32% 15%));
+    --gradient-card: linear-gradient(145deg, hsl(224 71% 6%), hsl(217 32% 15%));
+
+    /* Shadows for dark mode */
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-chart: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    --shadow-elegant: 0 2px 10px -2px hsl(0 0% 0% / 0.2);
+
+    /* Sidebar colors */
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 70%;
+    --sidebar-primary-foreground: 224 71% 4%;
+    --sidebar-accent: 217 32% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 32% 20%;
+    --sidebar-ring: 217 91% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
